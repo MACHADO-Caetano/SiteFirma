@@ -3,8 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+.ajuste2{
+    
+    justify-content: center; 
+    width: 25%; 
+    align-items: center;
+}
+.ajuste{
+    width: 33%; 
+    text-align: justify;
+}
 
-section {
+section{
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -43,7 +53,7 @@ section {
     padding: 5px;
     height: 200px;
     width: 250px;
-    background-color: red;
+    background-color: #70211f;
     text-decoration: none; 
     color: white;
     border-radius: 20px;
@@ -60,18 +70,21 @@ section {
     background-image: url(./imagens/fundo_teste.jpg);
     background-size: cover; /* Isso fará com que a imagem de fundo cubra toda a seção */
     background-position: center; /* Isso centraliza a imagem de fundo na seção */
+    width: 33%;
 }
 
 .cards_hist2{
     background-image: url(./imagens/imagem_teste.jpg);
     background-size: cover; /* Isso fará com que a imagem de fundo cubra toda a seção */
     background-position: center; /* Isso centraliza a imagem de fundo na seção */
+    width: 33%;
 }
 
 .cards_hist3{
     background-image: url(./imagens/imagem_teste.jpg);
     background-size: cover; /* Isso fará com que a imagem de fundo cubra toda a seção */
     background-position: center; /* Isso centraliza a imagem de fundo na seção */
+    width: 33%;
 }
 
 
@@ -83,13 +96,20 @@ section {
 
 .caixa2{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrapy;
     height: 100%;
-    margin: 2px;
-    background-color: black;
+    margin: 10px;
+    padding: 10px;
+    background-color: #202020;
     color: white;   
+}
+
+#accordionExample {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se não houver espaço suficiente */
+    justify-content: space-around; /* Espaçamento uniforme entre os cards */
+    align-items: flex-start; /* Alinha os itens ao topo */
+    float: left;
+    width: 75%;
 }
 
 .card p {
@@ -98,8 +118,12 @@ section {
 
 
 .div_titulo_section{
-    display: flex;  
-    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    margin: 10px;
+    color: white;
+    padding-left: 100px;
 }
 
 .image_header{
@@ -110,7 +134,7 @@ section {
     text-align: center;
     margin: 2px;
     padding: 2px;
-    background-color: red;
+    background-color: #b80f0a;
     color: white;
 }
 
@@ -120,7 +144,10 @@ section {
     justify-content: center;
     align-items:flex-start;
     height: 75vh;
-    
+    background-image: url(./imagens/teste_fundo.jpg);
+    background-size: cover; /* Isso fará com que a imagem de fundo cubra toda a seção */
+    background-position: center; /* Isso centraliza a imagem de fundo na seção */
+
     margin: 2px;
     padding: 2px;
 }
@@ -130,7 +157,7 @@ section {
     justify-content:space-around;
     align-items: center;
     padding: 2px;
-    background-color: black;
+    background-color: #181818;
     color: white;
 }
 .caixa3_titulo{
@@ -150,8 +177,11 @@ section {
 }
 
 .caixa4{
+    height: 100vh;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
     margin: 5px;
     padding: 10px;  
     color: black;
@@ -160,7 +190,6 @@ section {
     background-position: center; /* Isso centraliza a imagem de fundo na seção */
     opacity: 0.75; /* Ajuste a opacidade conforme necessário */
     z-index: -1; /* Garante que a marca d'água fique atrás do conteúdo */
-    
 }
 
 #prod_list{
@@ -168,18 +197,9 @@ section {
     background-color: black;
     color: white; /* Para garantir que o texto seja legível sobre o fundo escuro */
     display: inline; /* Faz com que o fundo preencha apenas o espaço ocupado pelo texto */
-    padding: 0 4px; 
-    margin: 1px;
-   
+    /* padding: 0 4px; 
+    margin: 1px; */
     font-weight: bold;
-}
-
-li span {
-    border-radius: 10px;
-    background-color: black;
-    color: white; /* Para garantir que o texto seja legível sobre o fundo escuro */
-    display: inline; /* Faz com que o fundo preencha apenas o espaço ocupado pelo texto */
-    /* padding: 0 4px; Adiciona um pouco de espaço ao redor do texto */
 }
 
 .imagem_vendedores{
@@ -342,12 +362,12 @@ li span {
     .caixa2{
         display: flex;
         justify-content: space-around;
-        flex-wrap: wrap;
+        flex-direction: column;
         align-items: center;
-        height: 100%;
         margin: 2px;
         background-color: black;
-        color: white;   
+        color: white;
+        width: 100%;
     }
     .formulario_caixas3{
         display: flex;
@@ -379,5 +399,55 @@ li span {
         opacity: 1 !important;
         transform: none !important;
         transition: none !important;
+    }
+    .caixa4{
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 5px;
+        padding: 10px;  
+        color: black;
+        background-image: url(./imagens/carro.avif);
+        background-size: cover; /* Isso fará com que a imagem de fundo cubra toda a seção */
+        background-position: center; /* Isso centraliza a imagem de fundo na seção */
+        opacity: 0.75; /* Ajuste a opacidade conforme necessário */
+        z-index: -1; /* Garante que a marca d'água fique atrás do conteúdo */
+    }
+
+    .cards_hist{
+        background-image: url(./imagens/fundo_teste.jpg);
+        background-size: cover; /* Isso fará com que a imagem de fundo cubra toda a seção */
+        background-position: center; /* Isso centraliza a imagem de fundo na seção */
+        
+    }
+    
+    .cards_hist2{
+        background-image: url(./imagens/imagem_teste.jpg);
+        background-size: cover; /* Isso fará com que a imagem de fundo cubra toda a seção */
+        background-position: center; /* Isso centraliza a imagem de fundo na seção */
+        
+    }
+    
+    .cards_hist3{
+        background-image: url(./imagens/imagem_teste.jpg);
+        background-size: cover; /* Isso fará com que a imagem de fundo cubra toda a seção */
+        background-position: center; /* Isso centraliza a imagem de fundo na seção */
+       
+    }
+
+    .ajuste2{
+        width: 100%;
+    }
+
+    .ajuste{
+        text-align: justify;
+    }
+
+    .div_titulo_section{
+        padding: 10px;
+        color: white;
+        width: 100%;
     }
 }
